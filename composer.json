@@ -1,0 +1,16 @@
+{
+    "name": "blueflamingos/support",
+    "description": "Support package for Laravel applications",
+    "autoload": {
+        "psr-4": {
+            "Blueflamingos\\Support\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robert-John van Doesburg",
+            "email": "robert-john@blueflamingos.nl"
+        }
+    ],
+    "require": {}
+}
