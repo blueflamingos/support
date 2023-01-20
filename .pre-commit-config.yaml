@@ -53,11 +53,5 @@ repos:
           - id: php-lint
           - id: php-lint-all
 
-    - repo: https://github.com/igorshubovych/markdownlint-cli
-      rev: v0.27.1
-      hooks:
-          - id: markdownlint
-            name: Lint Markdown files
-
 exclude: public/.*
 default_stages: [commit]
