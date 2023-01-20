@@ -14,6 +14,8 @@ class DefaultForm extends Components\Grid
 
     protected ?Components\Group $aside;
 
+    protected $modelInformation;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -24,7 +26,7 @@ class DefaultForm extends Components\Grid
         $this->aside = Components\Group::make()
             ->columnSpan(['lg' => 1])
             ->schema([
-                ModelInformation::make(),
+                $this->modelInformation ?? ModelInformation::make(),
 
                 FormActions::make(),
             ]);
@@ -50,6 +52,13 @@ class DefaultForm extends Components\Grid
     public function aside(array|Closure $components): static
     {
         $this->aside->schema($components);
+
+        return $this;
+    }
+
+    public function modelInformation($modelInformation): static
+    {
+        $this->modelInformation = $modelInformation;
 
         return $this;
     }

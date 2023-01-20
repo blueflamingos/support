@@ -8,7 +8,7 @@ use Filament\Forms\Components\Field;
 
 class FormActions extends Field
 {
-    protected string $view = 'forms.components.form-actions';
+    protected string $view = 'blueflamingos-support::filament.forms.components.form-actions';
 
     public static function make(?string $name = null): static
     {

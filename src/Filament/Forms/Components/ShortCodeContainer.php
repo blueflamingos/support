@@ -9,7 +9,7 @@ use Filament\Forms\Components\RichEditor;
 
 class ShortCodeContainer extends Grid
 {
-    protected string $view = 'forms.components.shortcode-container';
+    protected string $view = 'blueflamingos-support::filament.forms.components.shortcode-container';
 
     protected ?ShortCodeToolbar $toolbar;
 

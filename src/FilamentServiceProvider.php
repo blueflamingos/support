@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Blueflamingos\Support\Providers;
+namespace Blueflamingos\Support;
 
 use Filament\PluginServiceProvider;
 use Filament\Navigation\UserMenuItem;
@@ -12,17 +12,15 @@ class FilamentServiceProvider extends PluginServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        $package->name('blueflamingos-support');
+        $package->name('blueflamingos-support')
+            ->hasViews()
+            ->hasConfigFile('blue-flamingos')
+            ->hasRoutes('web');
     }
 
-    public function boot(): void
-    {
-
-    }
     protected function getUserMenuItems(): array
     {
         return [
-
             UserMenuItem::make()
                 ->icon('heroicon-o-collection')
                 ->label('Horizon')

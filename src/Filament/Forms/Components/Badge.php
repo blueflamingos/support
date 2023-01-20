@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Badge extends Field
 {
-    protected string $view = 'forms.components.badge';
+    protected string $view = 'blueflamingos-support::filament.forms.components.badge';
 
     protected string | Closure | null $color = null;
 

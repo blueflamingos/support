@@ -12,7 +12,7 @@ class ShortCodeToolbar extends Field
 {
     use InteractsWithShortCodes;
 
-    protected string $view = 'forms.components.shortcode-toolbar';
+    protected string $view = 'blueflamingos-support::filament.forms.components.shortcode-toolbar';
 
     protected array | Closure $shortCodes = [];
 
