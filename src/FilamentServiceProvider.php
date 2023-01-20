@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Blueflamingos\Support;
 
-use Filament\PluginServiceProvider;
 use Filament\Navigation\UserMenuItem;
+use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
 
 class FilamentServiceProvider extends PluginServiceProvider

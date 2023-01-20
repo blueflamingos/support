@@ -10,12 +10,11 @@ class SupportServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        $this->loadJsonTranslationsFrom(__DIR__.'/../lang');
+        $this->loadJsonTranslationsFrom(__DIR__ . '/../lang');
     }
 
     public function register(): void
     {
         $this->app->register(FilamentServiceProvider::class);
     }
-
 }
