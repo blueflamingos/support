@@ -12,5 +12,20 @@
             "email": "robert-john@blueflamingos.nl"
         }
     ],
-    "require": {}
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Blueflamingos\\Support\\SupportServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "filament/filament": "*"
+    },
+    "require-dev": {
+        "laravel/framework": "*"
+    }
 }
