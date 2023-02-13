@@ -24,6 +24,7 @@ class DefaultForm extends Components\Grid
             ->columnSpan(['lg' => 2]);
 
         $this->aside = Components\Group::make()
+            ->extraAttributes(['class' => 'sticky top-10'])
             ->columnSpan(['lg' => 1])
             ->schema([
                 $this->modelInformation ?? ModelInformation::make(),
