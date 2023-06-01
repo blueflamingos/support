@@ -13,7 +13,7 @@ class ShortCodeContainer extends Grid
 
     protected ?ShortCodeToolbar $toolbar;
 
-    public static function make(int|array|null $columns = 1): static
+    public static function make(array | int | string | null $columns = 1): static
     {
         return parent::make($columns);
     }

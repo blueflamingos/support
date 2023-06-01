@@ -38,7 +38,7 @@ class DefaultForm extends Components\Grid
         ]);
     }
 
-    public static function make(array | int | null $columns = 3): static
+    public static function make(array | int | string | null $columns = 3): static
     {
         return parent::make($columns);
     }
