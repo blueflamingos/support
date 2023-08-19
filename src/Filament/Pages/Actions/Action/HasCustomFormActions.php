@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Blueflamingos\Support\Filament\Pages\Actions\Action;
 
-use Filament\Pages\Actions;
-use Filament\Pages\Actions\Action;
+use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Database\Eloquent\Model;
 
@@ -63,19 +62,19 @@ trait HasCustomFormActions
         return [];
     }
 
-    protected function getCreateFormAction(): Action
+    protected function getCreateFormAction(): Actions\Action
     {
         return parent::getCreateFormAction()
             ->color('success');
     }
 
-    protected function getSubmitFormAction(): Action
+    protected function getSubmitFormAction(): Actions\Action
     {
         return parent::getSubmitFormAction()
             ->color('success');
     }
 
-    protected function getSaveFormAction(): Action
+    protected function getSaveFormAction(): Actions\Action
     {
         return parent::getSaveFormAction()
             ->color('success');

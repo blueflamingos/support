@@ -5,10 +5,10 @@ declare(strict_types=1);
 namespace Blueflamingos\Support;
 
 use Filament\Navigation\UserMenuItem;
-use Filament\PluginServiceProvider;
 use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class FilamentServiceProvider extends PluginServiceProvider
+class FilamentServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

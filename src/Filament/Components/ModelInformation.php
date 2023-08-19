@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 namespace Blueflamingos\Support\Filament\Components;
 
+use Closure;
 use Filament\Forms\Components;
 use Filament\Forms\Components\Card;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Database\Eloquent\Model;
 
 class ModelInformation extends Card
 {
-    public static function make(array $schema = []): static
+    public static function make(array|Htmlable|string|Closure|null $schema = []): static
     {
         return parent::make([
             Components\Placeholder::make('created_at')

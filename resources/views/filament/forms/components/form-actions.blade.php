@@ -6,7 +6,7 @@ $actions = $this->getCachedCustomFormActions();
     @php
         $actions = array_filter(
             $actions,
-            fn (\Filament\Pages\Actions\Action | \Filament\Pages\Actions\ActionGroup $action): bool => ! $action->isHidden(),
+            fn (\Filament\Actions\Action | \Filament\Actions\ActionGroup $action): bool => ! $action->isHidden(),
         );
     @endphp
 
