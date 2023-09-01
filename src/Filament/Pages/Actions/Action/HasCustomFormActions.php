@@ -82,7 +82,8 @@ trait HasCustomFormActions
 
     protected function afterValidate(): void
     {
-        $this->dispatchBrowserEvent('removeAlert');
+        // TODO: Check if we still need this or if this was removed in Filament v3
+        //        $this->dispatchBrowserEvent('removeAlert');
     }
 
     protected function handleRecordUpdate(Model $record, array $data): Model
