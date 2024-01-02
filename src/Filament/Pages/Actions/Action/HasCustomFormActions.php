@@ -39,7 +39,7 @@ trait HasCustomFormActions
         return $this->getCachedCustomFormActions()[$name] ?? null;
     }
 
-    protected function getFormActions(): array
+    public function getFormActions(): array
     {
         return $this->showOriginalFormActions ? parent::getFormActions() : [];
     }
