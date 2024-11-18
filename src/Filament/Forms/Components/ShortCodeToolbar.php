@@ -34,6 +34,9 @@ class ShortCodeToolbar extends Field
             '[daagse]'             => '<b>[daagse]</b>',
             '[dagen]'              => '<b>[dagen]</b>',
             '[reisgezelschap]'     => '[reisgezelschap]',
+            '[maand]'              => '[maand]',
+            '[jaar]'               => '[jaar]',
+            '[vakantiejaar]'       => '[vakantiejaar]',
         ]);
     }
 }
