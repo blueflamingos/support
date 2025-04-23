@@ -16,6 +16,8 @@ class DefaultForm extends Components\Grid
 
     protected $modelInformation;
 
+    protected bool $actionButtons = false;
+
     protected function setUp(): void
     {
         parent::setUp();
@@ -26,16 +28,25 @@ class DefaultForm extends Components\Grid
         $this->aside = Components\Group::make()
             ->extraAttributes(['class' => 'sticky top-10'])
             ->columnSpan(['lg' => 1])
-            ->schema([
-                $this->modelInformation ?? ModelInformation::make(),
-
-                FormActions::make(),
-            ]);
+            ->schema($this->getDefaultAside());
 
         $this->schema([
             $this->main,
             $this->aside,
         ]);
+    }
+
+    public function getDefaultAside()
+    {
+        $aside = [
+            $this->modelInformation ?? ModelInformation::make(),
+        ];
+
+        if ($this->actionButtons) {
+            $aside[] = FormActions::make();
+        }
+
+        return $aside;
     }
 
     public static function make(array | int | string | null $columns = 3): static
@@ -60,6 +71,13 @@ class DefaultForm extends Components\Grid
     public function modelInformation($modelInformation): static
     {
         $this->modelInformation = $modelInformation;
+
+        return $this;
+    }
+
+    public function withoutCustomButtons(bool $customButtons = true): static
+    {
+        $this->actionButtons = ! $customButtons;
 
         return $this;
     }
