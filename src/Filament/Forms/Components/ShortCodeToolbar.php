@@ -37,6 +37,7 @@ class ShortCodeToolbar extends Field
             '[maand]'              => '[maand]',
             '[jaar]'               => '[jaar]',
             '[vakantiejaar]'       => '[vakantiejaar]',
+            '[accommodatie]'       => '[accommodatie]',
         ]);
     }
 }
